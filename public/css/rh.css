@@ -1,0 +1,36 @@
+.main{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.menu_linha{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: 2rem;
+}
+
+.card_{
+    margin-right: 5rem !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
