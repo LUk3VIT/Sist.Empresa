@@ -53,7 +53,7 @@ if (isset($_SESSION['id'])) {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="./funcionario.php">Lista</a></li>
-                    <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro</a></li>
+                    <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro Funcionario</a></li>
                     <li><a class="dropdown-item" href="#">Inativo</a></li>
                 </ul>
             </li>
@@ -88,73 +88,155 @@ if (isset($_SESSION['id'])) {
 
 <main class="main">
     <form class="container" action="../../controllers/cadastro.php" method="post">
-        <div class="row align-items-center">
-            <div class="mb-3 col-10">
-                <label class="form-label">Nome completo</label>
-                <input type="email" class="form-control" >
+        <div>
+            <h2>Empresa</h2>
+        </div>
+        <div class="row align-items-center justify-content-between">
+            <div class="mb-3 col-1">
+                <label class="form-label">Ficha n:</label>
+                <input type="number" class="form-control" >
             </div>
 
             <div class="mb-3 col-2">
-                <label class="form-label">Data de Nascimento</label>
-                <input type="date" class="form-control">
+                <label class="form-label">Matriculo n:</label>
+                <input type="number" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-8">
+                <label class="form-label">Rasão social</label>
+                <input type="text" class="form-control" name="cpf" placeholder="xxx.xxx.xxx.xx">
+            </div>
+
+            <div class="mb-3 col-4">
+                <label class="form-label">CNPJ:</label>
+                <input type="text" class="form-control" name="rg" placeholder="xxx.xxx.xxx.xx">
             </div>
         </div>
 
         <div class="row">
             <div class="mb-3 col-3">
-                <label class="form-label">CPF</label>
-                <input type="text" class="form-control" name="cpf" placeholder="xxx.xxx.xxx.xx">
-            </div>
-
-            <div class="mb-3 col-3">
-                <label class="form-label">RG</label>
-                <input type="text" class="form-control" name="rg" placeholder="xxx.xxx.xxx.xx">
-            </div>
-
-            <div class="mb-3 col-3">
                 <label class="form-label">Função</label>
-                <select class="form-control" aria-label=".form-select-lg example">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">Salario</label>
+                <input type="text" class="form-control" value="R$ ">
+            </div>
+        </div>
+
+        <div>
+            <h2>Funcinario</h2>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-8">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-4">
+                <label class="form-label">Grau Instruão</label>
+                <select class="form-select" aria-label="Default select example">
                     <option selected>...</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
             </div>
-
+        </div>
+        <div class="row">
             <div class="mb-3 col-3">
-                <label class="form-label">Salario</label>
-                <input type="text" class="form-control" name="salario" value="R$ ">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="mb-3 col-12">
-                <label class="form-label">Endereço</label>
-                <input type="text" class="form-control" placeholder="1234 Main St">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="mb-3 col-12">
-                <label class="form-label">Casa/Apartamento</label>
-                <input type="text" class="form-control" placeholder="Apartment, studio, or floor">
-            </div>
-        </div>   
-        <div class="row">
-            <div class="mb-3 col-6">
-                <label class="form-label">Cidade</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="mb-3 col-4">
-                <label class="form-label">Estado</label>
-                <select class="form-select">
-                    <option selected>Escolha...</option>
-                    <option>...</option>
+                <label class="form-label">Estado Civel</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="solteiro">Solteiro</option>
+                    <option value="casado">Casadp</option>
+                    <option value="divorciado">Divorciado</option>
                 </select>
             </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">E-mail</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">Celular</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">Telefone</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+        </div>
+
+        <div>
+            <h2>Origem</h2>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-3">
+                <label class="form-label">Data de nascimento</label>
+                <input type="date" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-7">
+                <label class="form-label">Local Nascimento</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
             <div class="mb-3 col-2">
-                <label class="form-label">CEP</label>
-                <input type="text" class="form-control">
+                <label class="form-label">UF</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-10">
+                <label class="form-label">Pai</label>
+                <input type="text" class="form-control" name="cpf" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-10">
+                <label class="form-label">Mã</label>
+                <input type="text" class="form-control" name="cpf" >
+            </div>
+        </div>
+
+        <div>
+            <h2>Info</h2>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-3">
+                <label class="form-label">Impos de renda</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">Individual</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">Dependente</label>
+                <input type="text" class="form-control" name="cpf">
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">1 Emprego</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+        </div>
+
+        
+
+        <div class="row justify-content-center">
+            <div class="mb-3 col-1">
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </form>

@@ -50,7 +50,7 @@ if (isset($_SESSION['id'])) {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="./funcionario.php">Lista</a></li>
-                    <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro</a></li>
+                    <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro Funcinario</a></li>
                     <li><a class="dropdown-item" href="#">Inativo</a></li>
                 </ul>
             </li>
@@ -127,6 +127,5 @@ if (isset($_SESSION['id'])) {
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/public/js/index.js">
 </body>
 </html>
