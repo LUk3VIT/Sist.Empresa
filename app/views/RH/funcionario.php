@@ -54,6 +54,7 @@ if (isset($_SESSION['id'])) {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="./funcionario.php">Lista</a></li>
                     <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro Funcinario</a></li>
+                    <li><a class="dropdown-item" href="./cadastroFuncao.php">Cadastro Função</a></li>
                     <li><a class="dropdown-item" href="#">Inativo</a></li>
                 </ul>
             </li>
@@ -579,6 +580,6 @@ if (isset($_SESSION['id'])) {
 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="../../../public/js/funcionario.js"></script>
+<script src="../../../public/ts-js/funcionario.js"></script>
 </body>
 </html>
