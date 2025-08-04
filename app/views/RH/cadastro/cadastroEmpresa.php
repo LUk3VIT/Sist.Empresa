@@ -19,17 +19,18 @@ if (isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magnus - Almoxarifado</title>
-    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <link rel="stylesheet" href="../../../../public/css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../public/css/style.css">
-    <link rel="stylesheet" href="../../../public/css/RH.css">
+    <link rel="stylesheet" href="../../../../public/css/style.css">
+    <link rel="stylesheet" href="../../../../public/css/funcionario.css">
+    
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.php">
+            <a class="navbar-brand" href="../index.php">
                 <img src="https://magnustrafo.com/wp-content/themes/magnus-trafo/assets/images/logo.svg" alt="Logo Magnus" width="100px">
             </a>
         </div>
@@ -42,7 +43,7 @@ if (isset($_SESSION['id'])) {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="./index.php">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
             </li>
             <li>
                 <li class="nav-item dropdown">
@@ -50,21 +51,21 @@ if (isset($_SESSION['id'])) {
                     Funcinario
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="./funcionario.php">Lista</a></li>
+                    <li><a class="dropdown-item" href="../funcionario.php">Lista</a></li>
                     <li><a class="dropdown-item" href="#">Inativo</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="./cadastro/cadastroFuncionario.php">Cadastro Funcionario</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Empresas
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="./cadastro/cadastroPerido.php">Cadastro Periodo</a></li>
-                    <li><a class="dropdown-item" href="./cadastro/cadastroFuncao.php">Cadastro Função</a></li>
+                    <li><a class="dropdown-item" href="./cadastroPerido.php">Cadastro Periodo</a></li>
+                    <li><a class="dropdown-item" href="./cadastroFuncao.php">Cadastro Função</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="./cadastro/cadastroEmpresa.ph">Cadasto Empresa</a></li>
+                    <li><a class="dropdown-item" href="./cadastroEmpresa.php">Cadasto Empresa</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -97,48 +98,38 @@ if (isset($_SESSION['id'])) {
 </nav>
 
 <main class="main">
-    <h1>RH</h1>
-    <article class="menu">
-        <div class="menu_linha">
-            <div class="card_" style="width: 18rem;">
-                <img src="../../../public/img/FuncionarioEquipe.png" class="card-img-top" alt="Funcionario">
-                <div class="card-body">
-                    <h5 class="card-title">Funcionario</h5>
-                    <p class="card-text">Lista de funcionario, cadastro, atualização e inativação. faça controle e pesquisa sobre o funcionario</p>
-                    <a href="./funcionario.php" class="btn btn-primary">Funcinario</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="../../../public/img/Calendario.png" class="card-img-top" alt="Calendario">
-                <div class="card-body">
-                    <h5 class="card-title">Presença</h5>
-                    <p class="card-text">Veja os funcionario presentes e os que faltaram ao longo do mês</p>
-                    <a href="#" class="btn btn-primary">Presença</a>
-                </div>
+    <form class="container" action="../../controllers/cadastro.php" method="post">
+
+        <div class="row align-items-center justify-content-center">
+            <div class="mb-3 col-3">
+                <h2>Cadastro Empresa</h2>
             </div>
         </div>
 
-        <div class="menu_linha">
-            <div class="card_" style="width: 18rem;">
-                <img src="../../../public/img/Pagamento.png" class="card-img-top" alt="Folha de Pagamento">
-                <div class="card-body">
-                    <h5 class="card-title">Folha de Pagamento</h5>
-                    <p class="card-text">Veja o pagemento de cada funcionario e o calculo descontando falta</p>
-                    <a href="#" class="btn btn-primary">Folha de Pagamento</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="../../../public/img/Vale.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Vale</h5>
-                    <p class="card-text">Consulte o valor do vale de cada funcionaio e veja se esta feito ou se ja descontou</p>
-                    <a href="" class="btn btn-primary">Vale</a>
-                </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="mb-3 col-4">
+                <label class="form-label">Razão Social</label>
+                <input type="number" class="form-control" name="ficha">
             </div>
         </div>
-    </article>
+
+        <div class="row align-items-center justify-content-center">
+            <div class="mb-3 col-4">
+                <label class="form-label">CNPJ</label>
+                <input type="number" class="form-control" name="matriculo">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="mb-3 col-1">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </form>
 </main>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>

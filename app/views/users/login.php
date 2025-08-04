@@ -22,6 +22,16 @@
         <input type="checkbox" class="form-check-input" >
         <label class="form-check-label">Check me out</label>
     </div>
+
+    <?php
+    $erro = $_GET['erro'];
+    
+    if($erro ==  1){
+        echo '<div class="alert alert-danger" role="alert">
+            A simple danger alert—check it out!
+            </div>';
+    }
+?>
     
     <button type="submit" class="btn btn-primary">Submit</button>
 

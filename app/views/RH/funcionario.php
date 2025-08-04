@@ -53,9 +53,20 @@ if (isset($_SESSION['id'])) {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="./funcionario.php">Lista</a></li>
-                    <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro Funcinario</a></li>
-                    <li><a class="dropdown-item" href="./cadastroFuncao.php">Cadastro Função</a></li>
                     <li><a class="dropdown-item" href="#">Inativo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./cadastro/cadastroFuncionario.php">Cadastro Funcionario</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Empresas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="./cadastro/cadastroPerido.php">Cadastro Periodo</a></li>
+                    <li><a class="dropdown-item" href="./cadastro/cadastroFuncao.php">Cadastro Função</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./cadastro/cadastroEmpresa.php">Cadasto Empresa</a></li>
                 </ul>
             </li>
             <li class="nav-item">

@@ -19,10 +19,10 @@ if (isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magnus - Almoxarifado</title>
-    <link rel="stylesheet" href="../../../public/css/reset.css">
+    <link rel="stylesheet" href="../../../../public/css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../public/css/style.css">
-    <link rel="stylesheet" href="../../../public/css/funcionario.css">
+    <link rel="stylesheet" href="../../../../public/css/style.css">
+    <link rel="stylesheet" href="../../../../public/css/funcionario.css">
     
 </head>
 <body>
@@ -30,7 +30,7 @@ if (isset($_SESSION['id'])) {
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.php">
+            <a class="navbar-brand" href="../index.php">
                 <img src="https://magnustrafo.com/wp-content/themes/magnus-trafo/assets/images/logo.svg" alt="Logo Magnus" width="100px">
             </a>
         </div>
@@ -43,7 +43,7 @@ if (isset($_SESSION['id'])) {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="./index.php">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
             </li>
             <li>
                 <li class="nav-item dropdown">
@@ -51,10 +51,21 @@ if (isset($_SESSION['id'])) {
                     Funcinario
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="./funcionario.php">Lista</a></li>
-                    <li><a class="dropdown-item" href="./cadastroFuncionario.php">Cadastro Funcionario</a></li>
-                    <li><a class="dropdown-item" href="./cadastroFuncao.php">Cadastro Função</a></li>
+                    <li><a class="dropdown-item" href="../funcionario.php">Lista</a></li>
                     <li><a class="dropdown-item" href="#">Inativo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./cadastro/cadastroFuncionario.php">Cadastro Funcionario</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Empresas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="./cadastroPerido.php">Cadastro Periodo</a></li>
+                    <li><a class="dropdown-item" href="./cadastroFuncao.php">Cadastro Função</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./cadastroEmpresa.php">Cadasto Empresa</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -106,12 +117,20 @@ if (isset($_SESSION['id'])) {
         <div class="row">
             <div class="mb-3 col-8">
                 <label class="form-label">Rasão social</label>
-                <input type="text" class="form-control" name="rasaoSocial" placeholder="xxx.xxx.xxx.xx">
+                <select class="form-select" name="funcao" aria-label="Default select example">
+                    <option selected>...</option>
+                    <!--
+                    preciasa crair um cadastro de função e puxar o que tiver no banco de dados pra ca
+                     -->
+                </select>
             </div>
 
             <div class="mb-3 col-4">
                 <label class="form-label">CNPJ:</label>
                 <input type="text" class="form-control" name="cnpj" placeholder="xxx.xxx.xxx.xx">
+                <!--
+                preciasa crair um cadastro de função e puxar o que tiver no banco de dados pra ca
+                -->
             </div>
         </div>
 
@@ -127,7 +146,19 @@ if (isset($_SESSION['id'])) {
             </div>
             <div class="mb-3 col-3">
                 <label class="form-label">Salario</label>
+                <!--
+                preciasa crair um cadastro de função e puxar o que tiver no banco de dados pra ca
+                -->
                 <input type="text" name="salario" class="form-control" value="R$ ">
+            </div>
+            <div class="mb-3 col-3">
+                <label class="form-label">Periodo</label>
+                <select class="form-select" name="funcao" aria-label="Default select example">
+                    <option selected>...</option>
+                    <!--
+                    preciasa crair um cadastro de função e puxar o que tiver no banco de dados pra ca
+                     -->
+                </select>
             </div>
         </div>
 
